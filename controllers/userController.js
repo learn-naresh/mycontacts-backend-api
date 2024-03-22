@@ -74,8 +74,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //@access PRIVATE
 
 const currentUser = asyncHandler (async (req , res) =>{
-    const user = await User.find()
-    res.status(200).json(user);
+    res.status(200).json(req.user);
 })
 
 module.exports = {
